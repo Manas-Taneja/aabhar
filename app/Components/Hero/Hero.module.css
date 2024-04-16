@@ -1,0 +1,9 @@
+.ShopNowButton{
+    position: absolute;
+    margin-top: 30rem;
+    margin-left: 43.5rem;
+
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+}
