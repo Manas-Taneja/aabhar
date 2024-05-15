@@ -4,5 +4,9 @@
 
 body{
     background-color: black;
+    min-height: 200vh;
+    
 }
 .background-container{background-position: center;}
+
+{}

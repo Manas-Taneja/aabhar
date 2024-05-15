@@ -1,6 +1,7 @@
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import React from 'react'
+import LowerPage from './Components/LowerPage/LowerPage'
 import './globals.css'
 
 import Image from 'next/image';
@@ -17,6 +18,9 @@ import Image from 'next/image';
 
 export default function page() {
   return (
-    <><Navbar /><Hero /></>
+    <>
+    <section style={{minHeight:'100vh' }} id="Upper"> <Navbar/><Hero/> </section>
+    <section style={{minHeight:'100vh' }} id="Lower">  <LowerPage/> </section>
+    </>
   )
 }

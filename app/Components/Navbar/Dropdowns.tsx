@@ -1,25 +1,9 @@
-import {
-  SelectValue,
-  SelectTrigger,
-  Select,
-  SelectItem,
-  SelectContent,
-} from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import ShoppingCartIcon from "./ShoppingCartIcon";
-import DiceFits from "./DiceFits";
-import UserProfileIcon from "./UserProfileIcon";
+import React from 'react';
+import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '../next-components/ui/select';
+export default function Dropdowns(){
+    return(
 
-export default function Component() {
-  return (
-    <div className="bg-transparent">
-      <nav className="flex justify-center items-center py-4 px-8">
-        <DiceFits/>
-        <ShoppingCartIcon className="justify-between text-white w-6 h-6" />
-        <UserProfileIcon className="justify-between text-white w-6 h-6" />
-      </nav>
-      <div className="flex justify-between items-center px-8">
+<div className="flex justify-between items-center px-8">
         <Select>
           <SelectTrigger className="mr-2 bg-black text-white border-0">
             <SelectValue placeholder="Core Collection" />
@@ -49,4 +33,4 @@ export default function Component() {
           </SelectContent>
         </Select>
       </div>
-    </div>)};
+    )};
