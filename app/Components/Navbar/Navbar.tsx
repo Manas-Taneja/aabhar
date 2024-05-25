@@ -12,7 +12,7 @@ import Dropdowns from "./Dropdowns";
 
 export default function Component() {
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent sticky top-0"  >
       <nav className="flex justify-center items-center py-4 px-8">
         <DiceFits/>
         <ShoppingCartIcon className="justify-between text-white w-6 h-6" />
