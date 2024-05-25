@@ -13,3 +13,8 @@
     color: white;
     cursor: pointer;
 }
+.disabled {
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
