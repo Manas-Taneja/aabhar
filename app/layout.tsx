@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 import "./globals.css";
+import Header from "./Components/Navbar/Header/Header";
+
 
 const inter = League_Spartan({ subsets: ["latin"] });
 
@@ -9,6 +11,7 @@ export const metadata: Metadata = {
   description: "In development by the Dicefits team.",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}><Header/>{children}</body>
     </html>
   );
 }

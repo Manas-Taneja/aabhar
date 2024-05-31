@@ -1,0 +1,14 @@
+.dicefitslogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-left: auto;
+    position: relative;
+  }
