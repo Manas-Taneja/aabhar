@@ -8,7 +8,6 @@ const ShopNowButton = () => {
   const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
-    console.log('isDisabled:', isDisabled); // Log the state after update
   }, [isDisabled]); // Run effect when isDisabled changes
 
   const handleClick = () => {

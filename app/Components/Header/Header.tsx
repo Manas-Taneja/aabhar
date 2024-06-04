@@ -1,3 +1,4 @@
+'use client'
 import ShoppingCartIcon from "./ShoppingCartIcon";
 import DiceFits from "./DiceFits";
 import UserProfileIcon from "./UserProfileIcon";
@@ -8,8 +9,8 @@ export default function Header() {
   <div className="bg-black">
     <nav className="flex justify-center items-center py-4 px-8">
       <DiceFits />
-      <Link href='/about'><ShoppingCartIcon className="justify-between text-white w-6 h-6" /></Link>
-      <Link href="/about"><UserProfileIcon className="justify-between text-white w-6 h-6" /></Link>
+      <ShoppingCartIcon className="justify-between text-white w-6 h-6" />
+      <Link href="/login"><UserProfileIcon className="justify-between text-white w-6 h-6" /></Link>
     </nav>
   </div>)
 }
