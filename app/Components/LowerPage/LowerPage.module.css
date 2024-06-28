@@ -1,11 +1,18 @@
-.redRectangleAll{
+.redRectangleAll {
     display: flex;
+    flex-wrap: wrap; /* Wrap rectangles on smaller screens */
     transition: all 0.5s ease-in-out;
     transition-duration: 1s;
     transition-delay: 0.5s;
-}
-
-.transition{
-    transition-duration:4s;
-    transition: all 0.5s ease-in-out;   
-}
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .redRectangleAll {
+      margin: 10px; /* Reduce margin on smaller screens */
+    }
+  
+    .redRectangle {
+      width: 3.5rem; /* Reduce rectangle width on mobile */
+    }
+  }
+  

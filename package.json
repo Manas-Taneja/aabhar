@@ -20,6 +20,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "daisyui": "^4.12.2",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.8.0",
     "intersection-observer": "^0.12.2",
@@ -31,6 +32,7 @@
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
     "shopify-buy": "^2.22.0",
+    "swr": "^2.2.5",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"
   },

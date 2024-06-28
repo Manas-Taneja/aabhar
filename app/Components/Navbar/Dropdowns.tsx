@@ -10,7 +10,7 @@ export default function Dropdowns(){
             <SelectValue placeholder="Core Collection" />
           </SelectTrigger>
           <SelectContent className="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-800 dark:focus:text-slate-50" position="popper">
-            <Link href='/legacy-collection'> Legacy Collection</Link>
+            <Link href='/pages/legacy-collection'> Legacy Collection</Link>
           </SelectContent>
         </Select>
         <Select>

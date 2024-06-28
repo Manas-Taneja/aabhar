@@ -10,7 +10,7 @@ export default function Header() {
     <nav className="flex justify-center items-center py-4 px-8">
       <DiceFits />
       <ShoppingCartIcon className="justify-between text-white w-6 h-6" />
-      <Link href="/login"><UserProfileIcon className="justify-between text-white w-6 h-6" /></Link>
+      <Link href="/pages/login"><UserProfileIcon className="justify-between text-white w-6 h-6" /></Link>
     </nav>
   </div>)
 }

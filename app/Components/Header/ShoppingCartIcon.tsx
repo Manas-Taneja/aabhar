@@ -147,7 +147,7 @@ export default function ShoppingCartIcon(
                         <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                         <div className="mt-6">
                           <a
-                            href="/checkout"
+                            href="/pages/checkout"
                             className="flex items-center justify-center rounded-md border border-transparent bg-rose-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-rose-800/50"
                           >
                             Checkout
