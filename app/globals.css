@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: black;
-    min-height: 200vh;
-    
+:root {
+  --primary-bg: black;
+  --secondary-bg: #121212;
+  --text-color: #ffffff;
 }
-.background-container{background-position: center;}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  min-height: 200vh;
+}
+
+.background-container {
+  background-position: center;
+  background-size: cover;
+}
