@@ -1,59 +1,67 @@
 /* eslint-disable @next/next/no-img-element */
-'use client'
-import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-import { SVGProps,Fragment, useState } from "react";
+"use client";
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Transition,
+  TransitionChild,
+} from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { SVGProps, Fragment, useState } from "react";
 
 const products = [
   {
     id: 1,
-    name: 'Throwback Hip Bag',
-    href: '#',
-    color: 'Salmon',
-    price: '$90.00',
+    name: "Throwback Hip Bag",
+    href: "#",
+    color: "Salmon",
+    price: "$90.00",
     quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
+    imageAlt:
+      "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
   },
   {
     id: 2,
-    name: 'Medium Stuff Satchel',
-    href: '#',
-    color: 'Blue',
-    price: '$32.00',
+    name: "Medium Stuff Satchel",
+    href: "#",
+    color: "Blue",
+    price: "$32.00",
     quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
     imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
   },
-]
+];
 
-export default function ShoppingCartIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
-  const [open, setOpen] = useState(false)
+export default function ShoppingCartIcon(props: SVGProps<SVGSVGElement>) {
+  const [open, setOpen] = useState(false);
   const handleOpenCart = () => {
     setOpen(true);
   };
-  return (<div>
+  return (
+    <div>
       <button onClick={handleOpenCart}>
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="8" cy="21" r="1" />
-        <circle cx="19" cy="21" r="1" />
-        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-      </svg>
-    </button>
+        <svg
+          {...props}
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="8" cy="21" r="1" />
+          <circle cx="19" cy="21" r="1" />
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+        </svg>
+      </button>
       <Transition show={open}>
         <Dialog className="relative z-10" onClose={setOpen}>
           <TransitionChild
@@ -66,7 +74,7 @@ export default function ShoppingCartIcon(
           >
             <div className="fixed inset-0 bg-gray-500 bg-opacity-80 transition-opacity" />
           </TransitionChild>
-  
+
           <div className="fixed inset-0 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden">
               <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
@@ -82,7 +90,9 @@ export default function ShoppingCartIcon(
                     <div className="flex h-full flex-col overflow-y-scroll bg-black shadow-xl">
                       <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                         <div className="flex items-start justify-between">
-                          <DialogTitle className="text-lg font-medium text-gray-300">Shopping cart</DialogTitle>
+                          <DialogTitle className="text-lg font-medium text-gray-300">
+                            Shopping cart
+                          </DialogTitle>
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
@@ -91,14 +101,20 @@ export default function ShoppingCartIcon(
                             >
                               <span className="absolute -inset-0.5" />
                               <span className="sr-only">Close panel</span>
-                              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                              <XMarkIcon
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
                             </button>
                           </div>
                         </div>
-  
+
                         <div className="mt-8">
                           <div className="flow-root">
-                            <ul role="list" className="-my-6 divide-y divide-gray-200">
+                            <ul
+                              role="list"
+                              className="-my-6 divide-y divide-gray-200"
+                            >
                               {products.map((product) => (
                                 <li key={product.id} className="flex py-6">
                                   <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -108,20 +124,26 @@ export default function ShoppingCartIcon(
                                       className="h-full w-full object-cover object-center"
                                     />
                                   </div>
-  
+
                                   <div className="ml-4 flex flex-1 flex-col">
                                     <div>
                                       <div className="flex justify-between text-base font-medium text-gray-300">
                                         <h3>
-                                          <a href={product.href}>{product.name}</a>
+                                          <a href={product.href}>
+                                            {product.name}
+                                          </a>
                                         </h3>
                                         <p className="ml-4">{product.price}</p>
                                       </div>
-                                      <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                                      <p className="mt-1 text-sm text-gray-500">
+                                        {product.color}
+                                      </p>
                                     </div>
                                     <div className="flex flex-1 items-end justify-between text-sm">
-                                      <p className="text-gray-500">Qty {product.quantity}</p>
-  
+                                      <p className="text-gray-500">
+                                        Qty {product.quantity}
+                                      </p>
+
                                       <div className="flex">
                                         <button
                                           type="button"
@@ -138,13 +160,15 @@ export default function ShoppingCartIcon(
                           </div>
                         </div>
                       </div>
-  
+
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-300">
                           <p>Subtotal</p>
                           <p>$262.00</p>
                         </div>
-                        <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                        <p className="mt-0.5 text-sm text-gray-500">
+                          Shipping and taxes calculated at checkout.
+                        </p>
                         <div className="mt-6">
                           <a
                             href="/pages/checkout"
@@ -155,7 +179,7 @@ export default function ShoppingCartIcon(
                         </div>
                         <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                           <p>
-                            or{' '}
+                            or{" "}
                             <button
                               type="button"
                               className="font-medium text-rose-800 hover:text-rose-600"
@@ -174,6 +198,7 @@ export default function ShoppingCartIcon(
             </div>
           </div>
         </Dialog>
-      </Transition></div>
-  )
+      </Transition>
+    </div>
+  );
 }
