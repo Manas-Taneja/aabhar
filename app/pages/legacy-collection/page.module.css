@@ -1,4 +1,4 @@
-.product-grid {
+/* .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -8,4 +8,109 @@
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
-  }
+  } */
+
+/* Product Card Styles - Adapted from Uiverse.io by garerim */
+
+/* Container for the product grid */
+.container {
+  background: transparent;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Product Card */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 320px;
+  background: #fff;
+  border: solid 3px #333;
+  box-shadow: -5px 5px #333;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 0px 0px #333;
+}
+
+/* Image Container */
+.imgCard {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.2s ease-in-out;
+}
+
+.card:hover .imgCard {
+  filter: blur(2px);
+}
+
+/* Add to Cart Overlay */
+.addCart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .addCart {
+  opacity: 1;
+}
+
+/* Product Info Section */
+.infoCard {
+  width: 100%;
+  height: 25%;
+  background: #f8f8f8;
+  border-top: solid 2px #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.productName {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.productPrice {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}

@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@builder.io/react-hydration-overlay": "^0.0.8",
     "@headlessui/react": "^2.0.4",
     "@heroicons/react": "^2.1.3",
     "@radix-ui/react-icons": "^1.3.0",
@@ -18,6 +17,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
+    "ajv-keywords": "^5.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "daisyui": "^4.12.2",
@@ -25,7 +25,9 @@
     "flowbite-react": "^0.8.0",
     "intersection-observer": "^0.12.2",
     "lucide-react": "^0.367.0",
-    "next": "14.1.4",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.0",
+    "next": "^14.2.24",
     "react": "^18.3.1",
     "react-dom": "^18",
     "react-intersection-observer": "^9.10.2",
